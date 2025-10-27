@@ -116,3 +116,28 @@ body{
 /* Reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .5s ease, transform .5s ease}
 .reveal.visible{opacity:1;transform:none}
+
+/* --- Fix sezione "Cosa trovi dentro" --- */
+#contenuti .media img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+#contenuti .grid--2 {
+  align-items: center;
+  gap: 34px;
+}
+
+@media (max-width: 900px) {
+  #contenuti .grid--2 {
+    grid-template-columns: 1fr;
+  }
+
+  #contenuti .media img {
+    max-height: 320px;
+  }
+}
